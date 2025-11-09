@@ -1,23 +1,33 @@
 <div class="grid grid-cols-12 gap-4 md:gap-6">
   <div class="col-span-12 space-y-6 xl:col-span-7">
-    <div><app-ecommerce-metrics /></div>
+    <!-- <div><app-ecommerce-metrics /></div>
 
-    <div><app-monthly-sales-chart /></div>
+    <div><app-monthly-sales-chart /></div> -->
+
+     <div><app-inventory-metrics [assets]="assets" /></div>
+
+    <!-- asset list / table -->
+    <!-- <div><app-asset-list [assets]="assets" /></div> -->
+    <app-recent-orders [assets]="assets" />
+
   </div>
 
   <div class="col-span-12 xl:col-span-5">
-    <app-monthly-target />
+    <app-monthly-target [assets]="assets" />
   </div>
 
-  <div class="col-span-12">
+  <!-- <div class="col-span-12">
     <app-statics-chart />
-  </div>
+  </div> -->
 
   <div class="col-span-12 xl:col-span-5">
-    <app-demographic-card />
+    <app-demographic-card/>
   </div>
 
+  <!-- <div class="col-span-12 xl:col-span-7">
+    <app-recent-orders [assets]="assets" />    
+  </div> -->
   <div class="col-span-12 xl:col-span-7">
-    <app-recent-orders/>
+    <div><app-asset-list [assets]="assets" /></div>
   </div>
 </div>
